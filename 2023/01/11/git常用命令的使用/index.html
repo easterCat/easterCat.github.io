@@ -16,21 +16,21 @@
   <meta name="author" content="easterCat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SSL 证书部署首先申请免费证书,推荐阿里或者七牛云https:&#x2F;&#x2F;cn.aliyun.com&#x2F;product&#x2F;cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy 下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;">
+    <meta name="description" content="git名词 workspace :工作区 Index&#x2F;Stage : 暂存区 Repository : 仓库区(或本地仓库) Remote :远程仓库区  常用操作分部解析 在任何目录创建新的git仓库,执行 git init**,** .git文件就是本地的一个仓库 git status 查看修改状态 git add ,是将文件放入了暂存区,可以使用git checkout “文件名”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx配置https">
-<meta property="og:url" content="http://yoursite.com/2023/01/11/nginx%E9%85%8D%E7%BD%AEhttps/index.html">
+<meta property="og:title" content="git常用命令的使用">
+<meta property="og:url" content="http://yoursite.com/2023/01/11/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SSL 证书部署首先申请免费证书,推荐阿里或者七牛云https:&#x2F;&#x2F;cn.aliyun.com&#x2F;product&#x2F;cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy 下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;">
+<meta property="og:description" content="git名词 workspace :工作区 Index&#x2F;Stage : 暂存区 Repository : 仓库区(或本地仓库) Remote :远程仓库区  常用操作分部解析 在任何目录创建新的git仓库,执行 git init**,** .git文件就是本地的一个仓库 git status 查看修改状态 git add ,是将文件放入了暂存区,可以使用git checkout “文件名”">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-01-11T04:04:52.000Z">
-<meta property="article:modified_time" content="2023-01-11T04:04:56.476Z">
+<meta property="article:published_time" content="2023-01-11T04:09:38.000Z">
+<meta property="article:modified_time" content="2023-01-11T04:10:04.582Z">
 <meta property="article:author" content="easterCat">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>nginx配置https - Hexo</title>
+  <title>git常用命令的使用 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="nginx配置https"></span>
+            <span id="subtitle" data-typed-text="git常用命令的使用"></span>
           
         </div>
 
@@ -208,7 +208,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-11 12:04" pubdate>
+        <time datetime="2023-01-11 12:09" pubdate>
           January 11, 2023 pm
         </time>
       </span>
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k words
+          1.1k words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          11 mins
+          9 mins
         
       </span>
     
@@ -269,20 +269,58 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">nginx配置https</h1>
+            <h1 style="display: none">git常用命令的使用</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="SSL-证书部署"><a href="#SSL-证书部署" class="headerlink" title="SSL 证书部署"></a><strong><strong>SSL 证书部署</strong></strong></h2><p>首先申请免费证书,推荐阿里或者七牛云<a target="_blank" rel="noopener" href="https://cn.aliyun.com/product/cas?from_alibabacloud=&source=5176.11533457&userCode=ywqc0ubl&type=copy">https://cn.aliyun.com/product/cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy</a></p>
-<p>下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;nginx&#x2F;</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jsx">/etc/nginx/certificate.<span class="hljs-property">crt</span>;<br><span class="hljs-regexp">/etc/</span>nginx/private.<span class="hljs-property">key</span>;<br></code></pre></td></tr></table></figure>
+                <h3 id="git名词"><a href="#git名词" class="headerlink" title="git名词"></a>git名词</h3><ul>
+<li>workspace :工作区</li>
+<li>Index&#x2F;Stage : 暂存区</li>
+<li>Repository : 仓库区(或本地仓库)</li>
+<li>Remote :远程仓库区</li>
+</ul>
+<h3 id="常用操作分部解析"><a href="#常用操作分部解析" class="headerlink" title="常用操作分部解析"></a>常用操作分部解析</h3><ul>
+<li>在任何目录创建新的git仓库,执行 git init**,** .git文件就是本地的一个仓库</li>
+<li>git status 查看修改状态</li>
+<li>git add ,是将文件放入了暂存区,可以使用git checkout “文件名” 将文件从暂存区重新拿到工作区</li>
+<li>git commit ,是将文件从暂存区放入到本地.git仓库</li>
+<li>git status, 查看文件的状态,在暂存区还是在本地仓库,还是已经在本地仓库,或者已经提交(通常这些vscode工具一目了然)</li>
+<li>git pull ,拉取的默认是你自己的分支,详细:git pull origin dev, git pull origin master 拉去远程master分支</li>
+</ul>
+<h3 id="git-配置"><a href="#git-配置" class="headerlink" title="git 配置"></a>git 配置</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-comment"># 显示当前的Git配置</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> <span class="hljs-built_in">--list</span><br><br><span class="hljs-comment"># 编辑Git配置文件</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> -<span class="hljs-string">e</span> [<span class="hljs-built_in">--global]</span><br><br><span class="hljs-comment"># 设置提交代码时的用户信息</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> [<span class="hljs-built_in">--global]</span> <span class="hljs-string">user</span>.<span class="hljs-string">name</span> <span class="hljs-string">&quot;[name]&quot;</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> [<span class="hljs-built_in">--global]</span> <span class="hljs-string">user</span>.<span class="hljs-string">email</span> <span class="hljs-string">&quot;[email address]&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>将这两个文件上传至服务器的&#x2F;etc&#x2F;nginx&#x2F;目录里</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jsx">scp /<span class="hljs-title class_">Users</span>/lilin/<span class="hljs-title class_">Downloads</span>/certificate.<span class="hljs-property">crt</span> root@xxx.<span class="hljs-property">xx</span>.<span class="hljs-property">xxx</span>.<span class="hljs-property">xx</span>:<span class="hljs-regexp">/etc/</span>nginx/<br>scp /<span class="hljs-title class_">Users</span>/lilin/<span class="hljs-title class_">Downloads</span>/private.<span class="hljs-property">crt</span> root@xxx.<span class="hljs-property">xx</span>.<span class="hljs-property">xxx</span>.<span class="hljs-property">xx</span>:<span class="hljs-regexp">/etc/</span>nginx/<br></code></pre></td></tr></table></figure>
-
-<h2 id="nginx-conf配置"><a href="#nginx-conf配置" class="headerlink" title="nginx.conf配置"></a>nginx.conf配置</h2><p>配置 https <a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=j1N+5oPWtgTmj4YYsFd5ww==.x32KBqxEXmGOwmMZfGjqRXhbghKgM1LsJhVbG+8iji5BQ1P9tGkbxC2u/dahY+V6">server</a>.注释掉之前的 http server 配置,新增 https server</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs jsx">将http重定向https<br>server &#123;<br>        listen <span class="hljs-number">80</span>;<br>        server_name ptg.<span class="hljs-property">life</span> www.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> noval.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> prompt.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> naifu.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">301</span> <span class="hljs-attr">https</span>:<span class="hljs-comment">//$host$request_uri;</span><br> &#125;<br><br>server &#123;<br>        listen <span class="hljs-number">443</span> ssl;<br>        server_name ptg.<span class="hljs-property">life</span> www.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> noval.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> prompt.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> naifu.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span>;<br><br>        # 新版的nginx只用listen <span class="hljs-number">443</span> ssl就行,需要注释<br>        # ssl on;<br>        keepalive_timeout 10m;<br>        server_tokens off;<br>        # 缓存<span class="hljs-variable constant_">SSL</span>握手产生的参数和加密密钥的时长<br>        ssl_session_timeout 10m;<br>        # 证书<br>        ssl_certificate /etc/nginx/certificate.<span class="hljs-property">crt</span>;<br>        ssl_certificate_key /etc/nginx/private.<span class="hljs-property">key</span>;<br>        # 日志<br>        access_log /<span class="hljs-keyword">var</span>/log/nginx/nginx.<span class="hljs-property">vhost</span>.<span class="hljs-property">access</span>.<span class="hljs-property">log</span>;<br>        error_log /<span class="hljs-keyword">var</span>/log/nginx/nginx.<span class="hljs-property">vhost</span>.<span class="hljs-property">error</span>.<span class="hljs-property">log</span>;<br><br>        # 根用iframe嵌入做个隐式url<br>        location / &#123;<br>            index index.<span class="hljs-property">html</span> index.<span class="hljs-property">htm</span> index.<span class="hljs-property">html</span> inde.<span class="hljs-property">php</span>;<br>            root /usr/share/nginx/html;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<h3 id="常用流程"><a href="#常用流程" class="headerlink" title="常用流程"></a>常用流程</h3><ul>
+<li>git add .</li>
+<li>git commit -m ‘ ‘</li>
+<li>git pull</li>
+<li>git push</li>
+</ul>
+<h3 id="常用git命令行快捷方式"><a href="#常用git命令行快捷方式" class="headerlink" title="常用git命令行快捷方式"></a>常用git命令行快捷方式</h3><ul>
+<li>gaa …… git add .</li>
+<li>gcam ‘’ …… git commit -m ‘’</li>
+<li>gl ……. git pull</li>
+<li>gp ……. git push</li>
+</ul>
+<p>执行cat ~&#x2F;.oh-my-zsh&#x2F;plugins&#x2F;git&#x2F;git.plugin.zsh 查看更多简写</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li>git log</li>
+<li>git reflog(涉及到的所有操作步骤)</li>
+<li>git reset –hard HEAD</li>
+<li>git checkout file 恢复暂存区的文件到工作区</li>
+<li>git checkout branch 切换分支</li>
+<li>git stash</li>
+<li>git stash pop</li>
+<li>git branch -r 查看远程分支</li>
+<li>git branch -a 查看所有分支</li>
+<li>git remote 列出所有的远程主机</li>
+<li>git pull –all 拉取远程所有的分支</li>
+<li>git commit –amend -message&#x3D;””(修改最近的一次提交注释)</li>
+<li><code>git checkout (branchname)</code> 切换分支命令</li>
+<li><code>git branch (branchname)</code> 创建分支命令</li>
+<li><code>git branch -d (branchname)</code> 删除分支命令</li>
+<li>git push origin –delete Chapater6 删除远程分支命令</li>
+</ul>
 
                 
               </div>
@@ -300,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>nginx配置https</div>
-      <div>http://yoursite.com/2023/01/11/nginx配置https/</div>
+      <div>git常用命令的使用</div>
+      <div>http://yoursite.com/2023/01/11/git常用命令的使用/</div>
     </div>
     <div class="license-meta">
       
@@ -345,18 +383,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/11/nginx%E9%85%8D%E7%BD%AE/" title="nginx配置">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">nginx配置</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/11/ubuntu18%E5%AE%89%E8%A3%85nginx/" title="ubuntu18安装nginx">
-                        <span class="hidden-mobile">ubuntu18安装nginx</span>
+                      <a href="/2023/01/11/AndroidStudio%E6%93%8D%E4%BD%9C/" title="AndroidStudio操作">
+                        <span class="hidden-mobile">AndroidStudio操作</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

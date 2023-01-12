@@ -16,21 +16,21 @@
   <meta name="author" content="easterCat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SSL 证书部署首先申请免费证书,推荐阿里或者七牛云https:&#x2F;&#x2F;cn.aliyun.com&#x2F;product&#x2F;cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy 下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;">
+    <meta name="description" content="Android studio操作command + shift + R 当前文件替换 command + shift + F 全局查找 command + shift + R 全局替换 command + O 全局搜索类**&#x2F;文件&#x2F;关键字&#x2F;(包括系统类,自定义类)** command + option + O 全局搜索方法 option + enter 将Statel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx配置https">
-<meta property="og:url" content="http://yoursite.com/2023/01/11/nginx%E9%85%8D%E7%BD%AEhttps/index.html">
+<meta property="og:title" content="AndroidStudio操作">
+<meta property="og:url" content="http://yoursite.com/2023/01/11/AndroidStudio%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SSL 证书部署首先申请免费证书,推荐阿里或者七牛云https:&#x2F;&#x2F;cn.aliyun.com&#x2F;product&#x2F;cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy 下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;">
+<meta property="og:description" content="Android studio操作command + shift + R 当前文件替换 command + shift + F 全局查找 command + shift + R 全局替换 command + O 全局搜索类**&#x2F;文件&#x2F;关键字&#x2F;(包括系统类,自定义类)** command + option + O 全局搜索方法 option + enter 将Statel">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-01-11T04:04:52.000Z">
-<meta property="article:modified_time" content="2023-01-11T04:04:56.476Z">
+<meta property="article:published_time" content="2023-01-11T04:09:05.000Z">
+<meta property="article:modified_time" content="2023-01-11T04:09:10.364Z">
 <meta property="article:author" content="easterCat">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>nginx配置https - Hexo</title>
+  <title>AndroidStudio操作 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="nginx配置https"></span>
+            <span id="subtitle" data-typed-text="AndroidStudio操作"></span>
           
         </div>
 
@@ -208,7 +208,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-11 12:04" pubdate>
+        <time datetime="2023-01-11 12:09" pubdate>
           January 11, 2023 pm
         </time>
       </span>
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k words
+          468 words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          11 mins
+          4 mins
         
       </span>
     
@@ -269,20 +269,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">nginx配置https</h1>
+            <h1 style="display: none">AndroidStudio操作</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="SSL-证书部署"><a href="#SSL-证书部署" class="headerlink" title="SSL 证书部署"></a><strong><strong>SSL 证书部署</strong></strong></h2><p>首先申请免费证书,推荐阿里或者七牛云<a target="_blank" rel="noopener" href="https://cn.aliyun.com/product/cas?from_alibabacloud=&source=5176.11533457&userCode=ywqc0ubl&type=copy">https://cn.aliyun.com/product/cas?from_alibabacloud&#x3D;&amp;source&#x3D;5176.11533457&amp;userCode&#x3D;ywqc0ubl&amp;type&#x3D;copy</a></p>
-<p>下载申请好的 ssl 证书文件压缩包到本地并解压到&#x2F;etc&#x2F;nginx&#x2F;</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jsx">/etc/nginx/certificate.<span class="hljs-property">crt</span>;<br><span class="hljs-regexp">/etc/</span>nginx/private.<span class="hljs-property">key</span>;<br></code></pre></td></tr></table></figure>
-
-<p>将这两个文件上传至服务器的&#x2F;etc&#x2F;nginx&#x2F;目录里</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jsx">scp /<span class="hljs-title class_">Users</span>/lilin/<span class="hljs-title class_">Downloads</span>/certificate.<span class="hljs-property">crt</span> root@xxx.<span class="hljs-property">xx</span>.<span class="hljs-property">xxx</span>.<span class="hljs-property">xx</span>:<span class="hljs-regexp">/etc/</span>nginx/<br>scp /<span class="hljs-title class_">Users</span>/lilin/<span class="hljs-title class_">Downloads</span>/private.<span class="hljs-property">crt</span> root@xxx.<span class="hljs-property">xx</span>.<span class="hljs-property">xxx</span>.<span class="hljs-property">xx</span>:<span class="hljs-regexp">/etc/</span>nginx/<br></code></pre></td></tr></table></figure>
-
-<h2 id="nginx-conf配置"><a href="#nginx-conf配置" class="headerlink" title="nginx.conf配置"></a>nginx.conf配置</h2><p>配置 https <a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=j1N+5oPWtgTmj4YYsFd5ww==.x32KBqxEXmGOwmMZfGjqRXhbghKgM1LsJhVbG+8iji5BQ1P9tGkbxC2u/dahY+V6">server</a>.注释掉之前的 http server 配置,新增 https server</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs jsx">将http重定向https<br>server &#123;<br>        listen <span class="hljs-number">80</span>;<br>        server_name ptg.<span class="hljs-property">life</span> www.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> noval.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> prompt.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> naifu.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">301</span> <span class="hljs-attr">https</span>:<span class="hljs-comment">//$host$request_uri;</span><br> &#125;<br><br>server &#123;<br>        listen <span class="hljs-number">443</span> ssl;<br>        server_name ptg.<span class="hljs-property">life</span> www.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> noval.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> prompt.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span> naifu.<span class="hljs-property">ptg</span>.<span class="hljs-property">life</span>;<br><br>        # 新版的nginx只用listen <span class="hljs-number">443</span> ssl就行,需要注释<br>        # ssl on;<br>        keepalive_timeout 10m;<br>        server_tokens off;<br>        # 缓存<span class="hljs-variable constant_">SSL</span>握手产生的参数和加密密钥的时长<br>        ssl_session_timeout 10m;<br>        # 证书<br>        ssl_certificate /etc/nginx/certificate.<span class="hljs-property">crt</span>;<br>        ssl_certificate_key /etc/nginx/private.<span class="hljs-property">key</span>;<br>        # 日志<br>        access_log /<span class="hljs-keyword">var</span>/log/nginx/nginx.<span class="hljs-property">vhost</span>.<span class="hljs-property">access</span>.<span class="hljs-property">log</span>;<br>        error_log /<span class="hljs-keyword">var</span>/log/nginx/nginx.<span class="hljs-property">vhost</span>.<span class="hljs-property">error</span>.<span class="hljs-property">log</span>;<br><br>        # 根用iframe嵌入做个隐式url<br>        location / &#123;<br>            index index.<span class="hljs-property">html</span> index.<span class="hljs-property">htm</span> index.<span class="hljs-property">html</span> inde.<span class="hljs-property">php</span>;<br>            root /usr/share/nginx/html;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="Android-studio操作"><a href="#Android-studio操作" class="headerlink" title="Android studio操作"></a>Android studio操作</h1><p>command + shift + R 当前文件替换</p>
+<p>command + shift + F 全局查找</p>
+<p>command + shift + R 全局替换</p>
+<p>command + O 全局搜索类**&#x2F;<strong>文件</strong>&#x2F;<strong>关键字</strong>&#x2F;(<strong>包括系统类</strong>,<strong>自定义类</strong>)**</p>
+<p>command + option + O 全局搜索方法</p>
+<p>option + enter 将<strong>StatelessWidget</strong>转 <strong>StatefulWidget</strong>   快速修复  ****快速生成构造方法</p>
+<p>command  + option + W 抽取代码为单独的<strong>Widget</strong></p>
+<p>command  + option + M 抽取代码为单独的方法**,<strong>或者抽取成</strong>get**方法</p>
+<p>command + option + L 格式化代码</p>
+<p>command + D 复制单行</p>
+<p>option + shift + up&#x2F;down上下移动代码</p>
+<p>command + \  热重载**(hot reload)**</p>
+<p>control+ R 运行项目</p>
+<p>command+ delete 删除行</p>
+<p><strong>Shift</strong> 双击 ****万能搜索</p>
+<p>stless 快速创建一个<strong>StatelessWidget</strong></p>
+<p>stful 快速创建一个<strong>StatefulWidget</strong></p>
 
                 
               </div>
@@ -300,8 +308,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>nginx配置https</div>
-      <div>http://yoursite.com/2023/01/11/nginx配置https/</div>
+      <div>AndroidStudio操作</div>
+      <div>http://yoursite.com/2023/01/11/AndroidStudio操作/</div>
     </div>
     <div class="license-meta">
       
@@ -345,9 +353,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/11/nginx%E9%85%8D%E7%BD%AE/" title="nginx配置">
+                      <a href="/2023/01/11/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git常用命令的使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">nginx配置</span>
+                        <span class="hidden-mobile">git常用命令的使用</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -355,8 +363,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/11/ubuntu18%E5%AE%89%E8%A3%85nginx/" title="ubuntu18安装nginx">
-                        <span class="hidden-mobile">ubuntu18安装nginx</span>
+                      <a href="/2023/01/11/studio%E6%93%8D%E4%BD%9C/" title="studio操作">
+                        <span class="hidden-mobile">studio操作</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

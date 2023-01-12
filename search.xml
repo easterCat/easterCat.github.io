@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>git常用命令的使用</title>
+      <link href="/2023/01/11/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/2023/01/11/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h3 id="git名词"><a href="#git名词" class="headerlink" title="git名词"></a>git名词</h3><ul><li>workspace :工作区</li><li>Index&#x2F;Stage : 暂存区</li><li>Repository : 仓库区(或本地仓库)</li><li>Remote :远程仓库区</li></ul><h3 id="常用操作分部解析"><a href="#常用操作分部解析" class="headerlink" title="常用操作分部解析"></a>常用操作分部解析</h3><ul><li>在任何目录创建新的git仓库,执行 git init**,** .git文件就是本地的一个仓库</li><li>git status 查看修改状态</li><li>git add ,是将文件放入了暂存区,可以使用git checkout “文件名” 将文件从暂存区重新拿到工作区</li><li>git commit ,是将文件从暂存区放入到本地.git仓库</li><li>git status, 查看文件的状态,在暂存区还是在本地仓库,还是已经在本地仓库,或者已经提交(通常这些vscode工具一目了然)</li><li>git pull ,拉取的默认是你自己的分支,详细:git pull origin dev, git pull origin master 拉去远程master分支</li></ul><h3 id="git-配置"><a href="#git-配置" class="headerlink" title="git 配置"></a>git 配置</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-comment"># 显示当前的Git配置</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> <span class="hljs-built_in">--list</span><br><br><span class="hljs-comment"># 编辑Git配置文件</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> -<span class="hljs-string">e</span> [<span class="hljs-built_in">--global]</span><br><br><span class="hljs-comment"># 设置提交代码时的用户信息</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> [<span class="hljs-built_in">--global]</span> <span class="hljs-string">user</span>.<span class="hljs-string">name</span> <span class="hljs-string">&quot;[name]&quot;</span><br>$ <span class="hljs-string">git</span> <span class="hljs-string">config</span> [<span class="hljs-built_in">--global]</span> <span class="hljs-string">user</span>.<span class="hljs-string">email</span> <span class="hljs-string">&quot;[email address]&quot;</span><br></code></pre></td></tr></table></figure><h3 id="常用流程"><a href="#常用流程" class="headerlink" title="常用流程"></a>常用流程</h3><ul><li>git add .</li><li>git commit -m ‘ ‘</li><li>git pull</li><li>git push</li></ul><h3 id="常用git命令行快捷方式"><a href="#常用git命令行快捷方式" class="headerlink" title="常用git命令行快捷方式"></a>常用git命令行快捷方式</h3><ul><li>gaa …… git add .</li><li>gcam ‘’ …… git commit -m ‘’</li><li>gl ……. git pull</li><li>gp ……. git push</li></ul><p>执行cat ~&#x2F;.oh-my-zsh&#x2F;plugins&#x2F;git&#x2F;git.plugin.zsh 查看更多简写</p><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul><li>git log</li><li>git reflog(涉及到的所有操作步骤)</li><li>git reset –hard HEAD</li><li>git checkout file 恢复暂存区的文件到工作区</li><li>git checkout branch 切换分支</li><li>git stash</li><li>git stash pop</li><li>git branch -r 查看远程分支</li><li>git branch -a 查看所有分支</li><li>git remote 列出所有的远程主机</li><li>git pull –all 拉取远程所有的分支</li><li>git commit –amend -message&#x3D;””(修改最近的一次提交注释)</li><li><code>git checkout (branchname)</code> 切换分支命令</li><li><code>git branch (branchname)</code> 创建分支命令</li><li><code>git branch -d (branchname)</code> 删除分支命令</li><li>git push origin –delete Chapater6 删除远程分支命令</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AndroidStudio操作</title>
+      <link href="/2023/01/11/AndroidStudio%E6%93%8D%E4%BD%9C/"/>
+      <url>/2023/01/11/AndroidStudio%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Android-studio操作"><a href="#Android-studio操作" class="headerlink" title="Android studio操作"></a>Android studio操作</h1><p>command + shift + R 当前文件替换</p><p>command + shift + F 全局查找</p><p>command + shift + R 全局替换</p><p>command + O 全局搜索类**&#x2F;<strong>文件</strong>&#x2F;<strong>关键字</strong>&#x2F;(<strong>包括系统类</strong>,<strong>自定义类</strong>)**</p><p>command + option + O 全局搜索方法</p><p>option + enter 将<strong>StatelessWidget</strong>转 <strong>StatefulWidget</strong>   快速修复  ****快速生成构造方法</p><p>command  + option + W 抽取代码为单独的<strong>Widget</strong></p><p>command  + option + M 抽取代码为单独的方法**,<strong>或者抽取成</strong>get**方法</p><p>command + option + L 格式化代码</p><p>command + D 复制单行</p><p>option + shift + up&#x2F;down上下移动代码</p><p>command + \  热重载**(hot reload)**</p><p>control+ R 运行项目</p><p>command+ delete 删除行</p><p><strong>Shift</strong> 双击 ****万能搜索</p><p>stless 快速创建一个<strong>StatelessWidget</strong></p><p>stful 快速创建一个<strong>StatefulWidget</strong></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>studio操作</title>
+      <link href="/2023/01/11/studio%E6%93%8D%E4%BD%9C/"/>
+      <url>/2023/01/11/studio%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SEO技巧</title>
+      <link href="/2023/01/11/SEO%E6%8A%80%E5%B7%A7/"/>
+      <url>/2023/01/11/SEO%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="SEO技巧"><a href="#SEO技巧" class="headerlink" title="SEO技巧"></a>SEO技巧</h1><p>这篇文章其实是我本人的总结，因为工作中做完了一个官方网站并成功上线，最后组长检查代码看到我的keyword等一系列信息都是空的，把我骂得狗血淋头。一言不合就作总结，总结一些简单但是我们能做的seo小技巧，送给想把网站做到极致的人。</p><h2 id="SEO要点："><a href="#SEO要点：" class="headerlink" title="SEO要点："></a><strong>SEO要点：</strong></h2><ol><li>语义化html标签，用合适的标签嵌套合适的内容，不可过分依赖div，对浏览器更友善就能更容易被抓取。</li><li>重要的内容html代码放在前面，放在左边。搜索引擎爬虫是从左往右，从上到下进行抓取的，利用布局来实现重要的代码在上面</li><li>重要内容要写在html架构里面，蜘蛛不会抓取js的内容，</li><li>尽量减少使用iframe，因为蜘蛛不会抓取iframe的内容。</li><li>为图片img加上alt属性，加了alt就不必加title了，避免搜索引擎认为我们恶意优化。alt能让图片没加载时都能有文字提示。</li><li>需要强调的地方加上title，本页面内跳转a标签内也要加title。</li><li>重要的地方可以保留文字，有些地方必须用图，但是蜘蛛不会爬img，这时应该设置文本，再用缩进隐藏的方法去掉文字，例如logo的优化就是这样做的。注意隐藏不能用display：none，蜘蛛不会检索display：none的内容，应用这个方法的标签一般是logo，标题等重要信息</li><li>尽量做到js、css、html的分离，不要在html中写样式代码。</li><li>注释的东西能去掉应该去掉，对搜索引擎更加友好</li><li>css放在头部，js放在尾部，尽量使用外链或者工具对css和js进行压缩</li><li>减少http的请求，使页面更快加载。</li><li>使用本地缓存更快地访问网站，使用cdn网络，加快用户访问速度。</li><li>使用G-ZIP压缩，浏览速度更快，搜索引擎抓取信息量更大</li></ol><h2 id="关键一点是头部的title，description，keyword的设置。"><a href="#关键一点是头部的title，description，keyword的设置。" class="headerlink" title="关键一点是头部的title，description，keyword的设置。"></a><strong>关键一点是头部的title，description，keyword的设置。</strong></h2><ol><li>title设置不宜过长，要简短，网站的名字与相关的小内容，一般为10-20个字。不能重复</li><li>keywords设置10个关键词，没个词不能太长，简短且符合你网站的特点，不能重复</li><li>description，50个字内描述你的网站</li></ol><p><strong>description写原创的话，并包含2-3个关键词比较好</strong></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nginx配置</title>
       <link href="/2023/01/11/nginx%E9%85%8D%E7%BD%AE/"/>
       <url>/2023/01/11/nginx%E9%85%8D%E7%BD%AE/</url>
