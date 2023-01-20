@@ -10,7 +10,7 @@
 
     <!-- title -->
     
-    <title> Mysql的processlist中处理表连接 |  Hexo</title>
+    <title> Hexo</title>
 
     <!-- keywords,description -->
      
@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2023/01/16/Mysql%E7%9A%84processlist%E4%B8%AD%E5%A4%84%E7%90%86%E8%A1%A8%E8%BF%9E%E6%8E%A5/">
                      
 										    Mysql的processlist中处理表连接
@@ -222,92 +222,39 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-    Mysql的processlist中处理表连接
-</h1>
-<div class="article-meta">
-    
-    <span>easterCat</span>
-    <span>2023-01-16 16:22:53</span>
-    <div id="article-categories">
-        
-        <span>Categories：</span>
-          
-        <span>Tags：</span>
-         
-        <span>
-            <i class="fa fa-tag" aria-hidden="true">
-                <a href="/tags/Mysql/"
-                    >Mysql</a
-                >
-            </i>
-        </span>
-          
-    </div>
+		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2023/01/11/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/">
+				<h2 class="index-title">
+					Git常用命令的使用
+				</h2>
+				<div class="index-brief">
+					git名词
+workspace :工作区
+Index&#x2F;Stage : 暂存区
+Repository : 仓库区(或本地仓库)
+Remote :远程仓库区
+
+常用操作分部解析
+在任何目录创建新的git仓库,执行 git init**,** .git文件就是本地的一个仓库
+git status
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2023-01-11</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
-
-<div id="article-content"><h2 id="processlist中大量sleep"><a href="#processlist中大量sleep" class="headerlink" title="processlist中大量sleep"></a>processlist中大量sleep</h2><p>在生产环境切换mysql数据库，切换后数据库连接池爆满，抛出异常“too many connections”；</p>
-<p>出现这种现象，比较常见的原因是连接数真不够了，需要设置连接数：</p>
-<h3 id="连接数不够解决"><a href="#连接数不够解决" class="headerlink" title="连接数不够解决"></a>连接数不够解决</h3><pre><code class="js">mysql -u root -p;
-show full processlist;
-kill id;
-</code></pre>
-<h3 id="查看最大连接数"><a href="#查看最大连接数" class="headerlink" title="查看最大连接数"></a>查看最大连接数</h3><pre><code class="js">show variables like &quot;max_connections&quot;;
-</code></pre>
-<p>查看最大连接数，应该是与上面查询到的连接数相同，才会出现too many connections的情况</p>
-<pre><code class="js">set GLOBAL max_connections=1000;
-</code></pre>
-<p>修改最大连接数，但是这不是一劳永逸的方法，应该要让它自动杀死那些sleep的进程。</p>
-<h3 id="自动杀死那些sleep的进程"><a href="#自动杀死那些sleep的进程" class="headerlink" title="自动杀死那些sleep的进程"></a>自动杀死那些sleep的进程</h3><pre><code class="js">show global variables like &#39;wait_timeout&#39;;
-</code></pre>
-<p>这个数值指的是mysql在关闭一个非交互的连接之前要等待的秒数，默认是28800s</p>
-<pre><code class="js">set global wait_timeout=300; 
-</code></pre>
-<p>修改这个数值，这里可以随意，最好控制在几分钟内</p>
-<pre><code class="js">set global interactive_timeout=500; 
-</code></pre>
-<p>修改这个数值，表示mysql在关闭一个连接之前要等待的秒数，至此可以让mysql自动关闭那些没用的连接，但要注意的是，正在使用的连接到了时间也会被关闭，因此这个时间值要合适</p>
-<h3 id="笨方法"><a href="#笨方法" class="headerlink" title="笨方法"></a>笨方法</h3><pre><code class="js">select concat(&#39;KILL &#39;,id,&#39;;&#39;) from information_schema.processlist where user=&#39;root&#39;;
-</code></pre>
-<p>先把要kill的连接id都查询出来,然后一个个kill</p>
-</div>
-
-
-<div class="post-guide">
-    <div class="item left">
-        
-    </div>
-    <div class="item right">
-        
-        <a href="/2023/01/12/Flask-sqlalchemy%E4%BD%BF%E7%94%A8/">
-            Flask-sqlalchemy使用
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-        
-    </div>
-</div>
- 
-<div id="vcomments"></div>
-
-
-<script>
-    
-    	// 评论
-    	new Valine({
-    		el: '#vcomments',
-    		appId: '',
-    		appKey: '',
-    		placeholder: '请输入评论',
-    		path: window.location.pathname,
-    		avatar: 'retro',
-    		highlight: false,
-         recordIP: true,
-         enableQQ: true,
-    		requiredFields: ['nick','mail']
-    	})
-    
-    
-</script>
 
 	</div>
 	<div id="footer">
